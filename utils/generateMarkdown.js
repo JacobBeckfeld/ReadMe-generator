@@ -57,6 +57,30 @@ function generateMarkdown(data) {
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}
 #
+# Awesome Project
+![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
+## Description
+${data.description}
+## Table of Contents 
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+## Installation
+${data.instalation}
+
+## Usage
+${data.usage}
+
+## License
+${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)}
+
+## Contributing
+${data.contributers}
+
+${data.github}
+${data.email}
 `;
 }
 

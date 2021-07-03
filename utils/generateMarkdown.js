@@ -2,16 +2,16 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
     if( license === "Apache"){
-      return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+      return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]`
     }
     else if(license === "Boost"){
-      return `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+      return `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)]`
     }
     else if(license === "BSD"){
-      return `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
+      return `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)]`
     }
     else if(license === "Eclipse"){
-      return `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+      return `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]`
     }
 }
 
@@ -22,7 +22,7 @@ function renderLicenseLink(license) {
     return `http://www.apache.org/licenses/`
   }
   else if(license === "Boost"){
-    return `https://www.boost.org/LICENSE_1_0.txt)`
+    return `https://www.boost.org/LICENSE_1_0.txt`
   }
   else if(license === "BSD"){
     return `https://opensource.org/licenses/BSD-3-Clause`
@@ -54,11 +54,10 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.title} 
+  Made be ${data.name}
 ${renderLicenseBadge(data.license)}
-#
-# Awesome Project
-![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
+
 ## Description
 ${data.description}
 ## Table of Contents 
@@ -80,7 +79,7 @@ ${renderLicenseSection(data.license)}
 ${data.contributers}
 
 ${data.github}
-${data.email}
+https://${data.email}
 `;
 }
 
